@@ -1,0 +1,8 @@
+# Ignore VS Code settings
+.vscode/
+# Ignore OS files
+.DS_Store
+# Ignore node modules (if you add any later)
+node_modules/
+# Ignore temporary files
+*.log
