@@ -1,4 +1,4 @@
-/* Reset and global styles */
+/* Reset and global styles (unchanged) */
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +61,7 @@ nav {
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover, .nav-links li a.active {
     color: #00ccff;
 }
 
@@ -163,14 +163,14 @@ nav {
 
 /* Hero section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/hero.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/assets/images/hero-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
     text-align: center;
     padding: 4rem 2rem;
-    min-height: 400px;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -290,7 +290,7 @@ nav {
 
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
@@ -336,6 +336,7 @@ nav {
 
 .load-more {
     display: block;
+    width: 400px;
     margin: 2rem auto;
     padding: 0.8rem 2rem;
     background-color: #00ccff;
@@ -344,73 +345,513 @@ nav {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none; /* Remove underline for link */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .load-more:hover {
     background-color: #0099cc;
+    transform: scale(1.05); /* Subtle scale effect on hover */
 }
 
-/* Full post styles for posts.html (existing, plus new for list) */
-.post-content {
-    padding: 2rem;
+
+
+
+/* About page styles */
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/assets/images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-content {
     max-width: 800px;
-    margin: 0 auto;
 }
 
-.full-post {
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.teams {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+}
+
+.teams h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+.team-card .team-meta {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 0 1rem;
+}
+
+.team-card p {
+    font-size: 1rem;
+    padding: 0 1rem 1rem;
+}
+
+.team-card .read-more {
+    display: block;
+    padding: 0 1rem 1rem;
+}
+
+.about-cta {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #00ccff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0099cc;
+}
+
+
+
+/* Contact page styles */
+.contact-hero {
+    background: linear-gradient(135deg, #00ccff, #333);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.contact-hero-content {
+    max-width: 800px;
+}
+
+.contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-split {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f8f8;
+}
+
+.contact-split-left, .contact-split-right {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-form-card, .contact-details-card {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    height: 100%;
 }
 
-.post-image {
+.contact-form-card h2, .contact-details-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #00ccff;
+    box-shadow: 0 0 5px rgba(0, 204, 255, 0.5);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #00ccff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0099cc;
+    transform: scale(1.05);
+}
+
+.contact-details {
+    list-style: none;
     margin-bottom: 1.5rem;
 }
 
-.full-post h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.contact-details li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
 }
 
-.full-post .meta {
+.contact-details i {
+    color: #00ccff;
+}
+
+.contact-details a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #00ccff;
+}
+
+.contact-visual {
+    margin-top: 1.5rem;
+}
+
+.contact-visual iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    border: 0;
+}
+
+.contact-cta {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    color: #00ccff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #00ccff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0099cc;
+    transform: scale(1.05);
+}
+
+/* Responsive design for contact page */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 2rem 1rem;
+        min-height: 200px;
+    }
+
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .contact-split {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .contact-form-card, .contact-details-card {
+        padding: 1.5rem;
+    }
+
+    .contact-visual iframe {
+        height: 150px;
+    }
+
+    .contact-cta {
+        padding: 1rem;
+    }
+}
+
+/* Posts Page styling */
+.posts-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.posts-main {
+    flex: 3;
+    padding: 0 1rem;
+}
+
+.posts-main h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.posts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.posts-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.posts-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.posts-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.posts-card h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 0;
+    color: #333;
+}
+
+.posts-card .meta {
     font-size: 0.9rem;
     color: #666;
-    margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
-.full-post p {
+.posts-card p {
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    padding: 0 1rem 1rem;
+    color: #444;
 }
 
-.workout-list {
-    margin: 1.5rem 0;
-    padding-left: 1.5rem;
-}
-
-.workout-list li {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.back-link {
-    display: inline-block;
+.posts-card .read-more {
+    display: block;
+    padding: 0 1rem 1rem;
     color: #00ccff;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 1rem;
+    transition: color 0.3s ease;
 }
 
-.back-link:hover {
-    text-decoration: underline;
+.posts-card .read-more:hover {
+    color: #0099cc;
+}
+
+/* Sidebar styling */
+.posts-sidebar {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.posts-sidebar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.topic-links {
+    list-style: none;
+}
+
+.topic-links li {
+    margin-bottom: 0.8rem;
+}
+
+.topic-links li a {
+    color: #00ccff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.topic-links li a:hover {
+    color: #0099cc;
+    transform: translateX(5px);
+}
+
+/* Responsive design for main */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem 0;
+    }
+
+    .posts-container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .posts-main {
+        padding: 0;
+    }
+
+    .posts-sidebar {
+        order: -1; /* Move sidebar above main content on mobile */
+        margin-bottom: 1.5rem;
+    }
+
+    .posts-grid {
+        gap: 1.5rem;
+    }
+
+    .posts-main h2 {
+        font-size: 1.8rem;
+    }
+
+    .posts-sidebar h2 {
+        font-size: 1.6rem;
+    }
 }
 
 /* Footer styles */
@@ -514,7 +955,7 @@ nav {
     text-decoration: underline;
 }
 
-/* Responsive design for header */
+/* Responsive design for header (unchanged) */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -573,17 +1014,17 @@ nav {
 
 /* Responsive design for main sections */
 @media (max-width: 768px) {
-    .hero {
+    .hero, .about-hero {
         padding: 2rem 1rem;
-        min-height: 300px;
+        min-height: 200px;
         background-attachment: scroll;
     }
 
-    .hero h1 {
+    .hero h1, .about-hero h1 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .hero p, .about-hero p {
         font-size: 1rem;
     }
 
@@ -596,12 +1037,24 @@ nav {
         height: 200px;
     }
 
-    .post-grid {
+    .post-grid, .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .full-post {
+        padding: 1rem;
+    }
+
+    .post-image {
+        height: 200px;
+    }
+
+    .about-cta {
+        padding: 1rem;
     }
 }
 
-/* Responsive design for footer */
+/* Responsive design for footer (unchanged) */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
