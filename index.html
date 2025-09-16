@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Website - Home</title>
+    <title>My Blog - Home</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -16,7 +16,15 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="posts.html">Posts</a></li>
+                    <li class="dropdown">
+                        <a href="posts.html" class="dropdown-toggle">Posts <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="posts.html#technology">Technology</a></li>
+                            <li><a href="posts.html#lifestyle">Lifestyle</a></li>
+                            <li><a href="posts.html#tutorials">Tutorials</a></li>
+                            <li><a href="posts.html#news">News</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="Search posts...">
@@ -26,12 +34,90 @@
             </nav>
         </header>
         <main>
-            <!-- Placeholder for homepage content -->
-            <section class="blog-posts">
-                <h1>Latest Posts</h1>
-                <div class="post-grid" id="post-grid">
-                    <!-- Blog post previews will be added later -->
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to My Blog</h1>
+                    <p>Discover insightful articles on technology, lifestyle, tutorials, and more!</p>
+                    <a href="#blog-posts" class="hero-cta">Read Latest Posts</a>
                 </div>
+            </section>
+            <!-- Featured Post Section -->
+            <section class="featured-post">
+                <h2>Explore Our Topics</h2>
+                <div class="featured-grid">
+                    <!-- Technology -->
+                    <article class="featured-card">
+                        <img src="/assets/images/tech-posts.jpg" alt="Technology Topic">
+                        <div class="featured-content">
+                            <h3>Technology: Cutting-Edge Innovations</h3>
+                            <p class="meta">Updated September 16, 2025</p>
+                            <p>Stay ahead with the latest in tech, from AI breakthroughs to gadget reviews like the iPhone 17’s A19 chip and 48MP cameras.</p>
+                            <a href="posts.html#technology" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Lifestyle -->
+                    <article class="featured-card">
+                        <img src="/assets/images/lifestyle.jpg" alt="Lifestyle Topic">
+                        <div class="featured-content">
+                            <h3>Lifestyle: Live Your Best Life</h3>
+                            <p class="meta">Updated September 16, 2025</p>
+                            <p>Discover tips for wellness, travel, and modern living to inspire a balanced and fulfilling lifestyle.</p>
+                            <a href="posts.html#lifestyle" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <!-- Tutorials -->
+                    <article class="featured-card">
+                        <img src="/assets/images/hero-bg.jpg" alt="Tutorials Topic">
+                        <div class="featured-content">
+                            <h3>Tutorials: Learn and Grow</h3>
+                            <p class="meta">Updated September 16, 2025</p>
+                            <p>Master new skills with step-by-step guides on coding, DIY projects, and more for all levels.</p>
+                            <a href="posts.html#tutorials" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                    <!-- News -->
+                    <article class="featured-card">
+                        <img src="/assets/images/news.jpg" alt="News Topic">
+                        <div class="featured-content">
+                            <h3>News: Stay Informed</h3>
+                            <p class="meta">Updated September 16, 2025</p>
+                            <p>Get the latest updates on global events, industry trends, and breaking news that matters.</p>
+                            <a href="posts.html#news" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-- Blog Posts Section -->
+            <section class="blog-posts" id="blog-posts">
+                <h2>Latest Posts</h2>
+                <div class="post-grid" id="post-grid">
+                    
+                    <article class="post-card">
+                        <img src="/assets/images/iphone-17.jpg" alt="iPhone 17 Review">
+                        <h3>iPhone 17 Review: Apple's Slimmest Yet with Pro-Level Power</h3>
+                        <p class="meta">Posted on September 16, 2025</p>
+                        <p>Apple’s iPhone 17, unveiled September 9, 2025, dazzles with the A19 chip and stunning 48MP cameras.</p>
+                        <a href="posts.html#technology" class="read-more">Read More</a>
+                    </article>
+                    
+                    <article class="post-card">
+                        <img src="/assets/images/workout.jpg" alt="Top 10 Home Workouts">
+                        <h3>Top 10 Home Workouts: Transform Your Lifestyle Without Leaving Home</h3>
+                        <p class="meta">Posted on September 16, 2025</p>
+                        <p>Discover the best bodyweight exercises for a full-body routine that fits any busy schedule.</p>
+                        <a href="posts.html#lifestyle" class="read-more">Read More</a>
+                    </article>
+
+                    <article class="post-card">
+                        <img src="/assets/images/committee.jpg" alt="Kenya Protest Compensation">
+                        <h3>Kenya Government Forms Committee to Compensate Protest Victims Since 2017</h3>
+                        <p class="meta">Posted on September 16, 2025</p>
+                        <p>President Ruto announces a 120-day framework to redress harms from deadly protests, including Gen Z unrest.</p>
+                        <a href="posts.html#news" class="read-more">Read More</a>
+                    </article>
+                </div>
+                <button class="load-more">Load More</button>
             </section>
         </main>
         <footer class="footer">
@@ -45,10 +131,10 @@
                 <div class="footer-column">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">News</a></li>
+                        <li><a href="posts.html#technology">Technology</a></li>
+                        <li><a href="posts.html#lifestyle">Lifestyle</a></li>
+                        <li><a href="posts.html#tutorials">Tutorials</a></li>
+                        <li><a href="posts.html#news">News</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
