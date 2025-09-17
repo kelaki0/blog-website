@@ -1,0 +1,106 @@
+[
+    {
+        "title": "iPhone 17 Review: Apple's Slimmest Yet with Pro-Level Power",
+        "topic": "technology",
+        "date": "2025-09-16",
+        "image": "/assets/images/iphone-17.jpg",
+        "summary": "Apple’s iPhone 17, unveiled September 9, 2025, dazzles with the A19 chip and stunning 48MP cameras.",
+        "alt": "iPhone 17 Review"
+    },
+    {
+        "title": "Top 10 Home Workouts: Transform Your Lifestyle Without Leaving Home",
+        "topic": "health",
+        "date": "2025-09-16",
+        "image": "/assets/images/workout.jpg",
+        "summary": "Discover the best bodyweight exercises for a full-body routine that fits any busy schedule.",
+        "alt": "Top 10 Home Workouts"
+    },
+    {
+        "title": "Kenya Government Forms Committee to Compensate Protest Victims Since 2017",
+        "topic": "news",
+        "date": "2025-09-16",
+        "image": "/assets/images/committee.jpg",
+        "summary": "President Ruto announces a 120-day framework to redress harms from deadly protests, including Gen Z unrest.",
+        "alt": "Kenya Protest Compensation"
+    },
+    {
+        "title": "Kenya Government Forms Committee to Compensate Farmers Who Bought Fake Fertilizer in 2024",
+        "topic": "agriculture",
+        "date": "2025-09-16",
+        "image": "/assets/images/agriculture.jpg",
+        "summary": "President Ruto announces a 120-day framework to redress harms from fertilizer scandal.",
+        "alt": "Kenya Fertilizer Compensation"
+    },
+    {
+        "title": "Arsenal's 20 Year Premier League Trophy Ends",
+        "topic": "sports",
+        "date": "2025-09-16",
+        "image": "/assets/images/arsenal.jpg",
+        "summary": "Mikel Arteta steers Arsenal to Premier League win, bringing the 20-year wait to an end.",
+        "alt": "Arsenal Premier League Win"
+    },
+    {
+        "title": "AI Trends to Watch in 2026",
+        "topic": "technology",
+        "date": "2025-09-17",
+        "image": "/assets/images/ai-trends.jpg",
+        "summary": "Explore the latest advancements in AI, from generative models to automation.",
+        "alt": "AI Trends 2026"
+    },
+    {
+        "title": "Nairobi Tech Expo 2025: Highlights",
+        "topic": "events",
+        "date": "2025-09-17",
+        "image": "/assets/images/tech-expo.jpg",
+        "summary": "Key innovations showcased at Nairobi’s premier tech event.",
+        "alt": "Nairobi Tech Expo"
+    },
+        {
+        "title": "Kenya Government increases prices of tea for tea farmers.",
+        "topic": "agriculture",
+        "date": "2025-09-16",
+        "image": "/assets/images/tea-farm.jpg",
+        "summary": "President Ruto has instructed tea buying estates to increase prices to which they buy tea from farmers.",
+        "alt": "Tea prices raised"
+    },
+    {
+        "title": "Manchester United suffer a 3-0 defeat to rivals Manchester City.",
+        "topic": "sports",
+        "date": "2025-09-16",
+        "image": "/assets/images/manchester.jpg",
+        "summary": "Manchester United's troubles continue as they are beaten three goals to nothing in the Manchester derby fixture.",
+        "alt": "Manchester lose again"
+    },
+    {
+        "title": "AI Trends to Watch in 2026",
+        "topic": "technology",
+        "date": "2025-09-17",
+        "image": "/assets/images/ai-trends.jpg",
+        "summary": "Explore the latest advancements in AI, from generative models to automation.",
+        "alt": "AI Trends 2026"
+    },
+    {
+        "title": "Summer Fest 2025.",
+        "topic": "events",
+        "date": "2025-09-17",
+        "image": "/assets/images/summer-fest.jpg",
+        "summary": "Top entertainers headline the much anticipated summer fest 2025 held in Mombasa, Kenya.",
+        "alt": "Summer fest"
+    },
+        {
+        "title": "Whisteblower wins huge in court.",
+        "topic": "news",
+        "date": "2025-09-17",
+        "image": "/assets/images/amenya.jpg",
+        "summary": "Adani deal whistelblower Nelson Amenya has won in a court battle against Adani company and is compensated Ksh 200 million for damages.",
+        "alt": "Court case win"
+    },
+    {
+        "title": "Thousands risk flu infection.",
+        "topic": "health",
+        "date": "2025-09-17",
+        "image": "/assets/images/flu.jpg",
+        "summary": "Thousands of city slum dwellers risk infection of a new flu first detected in Kisumu. The deadly flu has claimed two lives at Kibera and Mathare slums.",
+        "alt": "Summer fest"
+    }
+]
