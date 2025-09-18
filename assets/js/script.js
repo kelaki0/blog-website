@@ -1,34 +1,35 @@
-// Dynamic Post Loading
+// Topic Filter Functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // Select .load-more button
+    const postGrid = document.querySelector('#posts-grid');
+    const topicLinks = document.querySelectorAll('.topic-links a, .footer-links a');
+    const noResults = postGrid ? postGrid.querySelector('.no-results') : null;
     const loadMoreBtn = document.querySelector('.load-more');
-    // Select #post-grid (index.html) or .posts-grid (posts.html)
-    const postGrid = document.querySelector('#post-grid') || document.querySelector('.posts-grid');
 
-    // Ensure both elements exist
-    if (!loadMoreBtn || !postGrid) {
-        console.error('Load More button or post grid not found');
+    if (!postGrid || !noResults || !topicLinks.length || !loadMoreBtn) {
+        console.error('Topic filter elements not found');
         return;
     }
 
-    // Set postIndex to the number of existing posts
-    let postIndex = postGrid.querySelectorAll('.post-card, .posts-card').length;
-    // Set postsPerLoad: 2 for index.html, 3 for posts.html
-    const postsPerLoad = postGrid.id === 'post-grid' ? 2 : 3;
+    let currentTopic = 'all'; // Track current topic
 
-    // Load posts.json
-    fetch('/assets/data/posts.json')
-        .then(response => {
-            if (!response.ok) throw new Error('Failed to load posts');
-            return response.json();
-        })
-        .then(posts => {
-            loadMoreBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const nextPosts = posts.slice(postIndex, postIndex + postsPerLoad);
-                nextPosts.forEach(post => {
+    const filterPostsByTopic = (topic, clickedLink) => {
+        currentTopic = topic; // Update current topic
+        fetch('/assets/data/posts.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to load posts');
+                return response.json();
+            })
+            .then(posts => {
+                // Clear current posts
+                postGrid.querySelectorAll('.posts-card').forEach(post => post.remove());
+
+                // Filter posts by topic
+                const filteredPosts = topic === 'all' ? posts : posts.filter(post => post.topic === topic);
+
+                // Display filtered posts
+                filteredPosts.forEach(post => {
                     const postCard = document.createElement('article');
-                    postCard.className = postGrid.id === 'post-grid' ? 'post-card' : 'posts-card';
+                    postCard.className = 'posts-card';
                     postCard.dataset.topic = post.topic;
                     postCard.innerHTML = `
                         <img src="${post.image}" alt="${post.alt}" width="300" height="200" loading="lazy">
@@ -39,9 +40,69 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     postGrid.appendChild(postCard);
                 });
-                postIndex += postsPerLoad;
-                if (postIndex >= posts.length) {
-                    loadMoreBtn.style.display = 'none';
+
+                // Update active state
+                topicLinks.forEach(link => link.classList.remove('active'));
+                clickedLink.classList.add('active');
+
+                // Show no-results if no matches
+                noResults.style.display = filteredPosts.length === 0 ? 'block' : 'none';
+
+                // Disable load-more if no more posts for this topic
+                loadMoreBtn.disabled = topic !== 'all' && filteredPosts.length === posts.filter(post => post.topic === topic).length;
+                loadMoreBtn.style.display = filteredPosts.length === 0 ? 'none' : '';
+            })
+            .catch(error => {
+                console.error('Error loading posts:', error);
+                noResults.textContent = 'Error loading posts';
+                noResults.style.display = 'block';
+            });
+    };
+
+    topicLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (window.location.pathname.includes('posts.html')) {
+                e.preventDefault();
+                const topic = link.dataset.topic;
+                filterPostsByTopic(topic, link);
+            }
+            // Else, allow navigation to /posts/[topic].html
+        });
+    });
+
+    // Update dynamic post loading to respect current topic
+    fetch('/assets/data/posts.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load posts');
+            return response.json();
+        })
+        .then(posts => {
+            let postIndex = postGrid.querySelectorAll('.posts-card').length;
+            const postsPerLoad = 3;
+
+            loadMoreBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const availablePosts = currentTopic === 'all' ? posts : posts.filter(post => post.topic === currentTopic);
+                const nextPosts = availablePosts.slice(postIndex, postIndex + postsPerLoad);
+
+                nextPosts.forEach(post => {
+                    const postCard = document.createElement('article');
+                    postCard.className = 'posts-card';
+                    postCard.dataset.topic = post.topic;
+                    postCard.innerHTML = `
+                        <img src="${post.image}" alt="${post.alt}" width="300" height="200" loading="lazy">
+                        <h3>${post.title}</h3>
+                        <p class="meta">Posted on ${post.date}</p>
+                        <p>${post.summary}</p>
+                        <a href="/posts/${post.topic}.html" class="read-more" aria-label="Read full ${post.title} post">Read More</a>
+                    `;
+                    postGrid.appendChild(postCard);
+                });
+
+                postIndex += nextPosts.length;
+                if (postIndex >= availablePosts.length) {
+                    loadMoreBtn.disabled = true;
+                    loadMoreBtn.style.display = currentTopic === 'all' && postIndex >= posts.length ? 'none' : '';
                 }
             });
         })
@@ -50,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             loadMoreBtn.textContent = 'Error Loading Posts';
         });
 });
-
 
 // Search Bar Functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -101,3 +161,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
