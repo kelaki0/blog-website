@@ -55,7 +55,7 @@
         "summary": "Key innovations showcased at Nairobi’s premier tech event.",
         "alt": "Nairobi Tech Expo"
     },
-        {
+    {
         "title": "Kenya Government increases prices of tea for tea farmers.",
         "topic": "agriculture",
         "date": "2025-09-16",
@@ -87,7 +87,7 @@
         "summary": "Top entertainers headline the much anticipated summer fest 2025 held in Mombasa, Kenya.",
         "alt": "Summer fest"
     },
-        {
+    {
         "title": "Whisteblower wins huge in court.",
         "topic": "news",
         "date": "2025-09-17",
@@ -101,6 +101,62 @@
         "date": "2025-09-17",
         "image": "/assets/images/flu.jpg",
         "summary": "Thousands of city slum dwellers risk infection of a new flu first detected in Kisumu. The deadly flu has claimed two lives at Kibera and Mathare slums.",
-        "alt": "Summer fest"
+        "alt": "Flu Outbreak"
+    },
+    {
+        "title": "Revolutionary 'Smart Seeds' Boost Crop Yields by 40%",
+        "topic": "agriculture",
+        "date": "2025-09-18",
+        "image": "/assets/images/smart-seeds.jpg",
+        "summary": "A new biotech innovation, 'Smart Seeds', promises to significantly enhance agricultural productivity and food security.",
+        "alt": "Smart Seeds Technology"
+    },
+    {
+        "title": "The Future of Gaming: Cloud-Based Consoles and Hyper-Realistic Graphics",
+        "topic": "technology",
+        "date": "2025-09-18",
+        "image": "/assets/images/gaming-future.jpg",
+        "summary": "Experts predict a shift to cloud-based gaming and a new era of hyper-realistic visuals, powered by advanced GPUs.",
+        "alt": "Future of Gaming"
+    },
+    {
+        "title": "World Cup 2026 Qualifiers: The Road to Glory Begins",
+        "topic": "sports",
+        "date": "2025-09-18",
+        "image": "/assets/images/world-cup-qualifiers.jpg",
+        "summary": "Teams from around the globe kick off their campaigns in the first round of World Cup 2026 qualifiers.",
+        "alt": "World Cup 2026 Qualifiers"
+    },
+    {
+        "title": "New Study Links Urban Living to Increased Mental Health Risks",
+        "topic": "health",
+        "date": "2025-09-18",
+        "image": "/assets/images/urban-health.jpg",
+        "summary": "A groundbreaking study reveals the psychological toll of city life and offers strategies for maintaining well-being.",
+        "alt": "Urban Health Study"
+    },
+    {
+        "title": "Major Political Scandal Rocks Parliament",
+        "topic": "news",
+        "date": "2025-09-19",
+        "image": "/assets/images/parliament.jpg",
+        "summary": "A leaked report exposes a massive corruption scheme involving high-ranking officials, leading to widespread calls for reform.",
+        "alt": "Parliament Scandal"
+    },
+    {
+        "title": "Global Climate Summit 2025: Key Agreements and Debates",
+        "topic": "events",
+        "date": "2025-09-19",
+        "image": "/assets/images/climate-summit.jpg",
+        "summary": "Leaders from over 100 countries gather to discuss new climate policies and international cooperation at the annual summit.",
+        "alt": "Global Climate Summit"
+    },
+    {
+        "title": "Sustainable Farming Techniques Gain Popularity",
+        "topic": "agriculture",
+        "date": "2025-09-19",
+        "image": "/assets/images/sustainable-farming.jpg",
+        "summary": "More farmers are adopting sustainable methods like crop rotation and organic fertilizers to protect the environment and improve soil health.",
+        "alt": "Sustainable Farming"
     }
 ]

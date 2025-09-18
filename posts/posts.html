@@ -19,12 +19,12 @@
                     <li class="dropdown">
                         <a href="/posts/posts.html" class="dropdown-toggle">Posts <i class="fas fa-chevron-down dropdown-icon"></i></a>
                         <ul class="dropdown-menu">
-                <li><a href="/posts/technology.html">Technology</a></li>
-                <li><a href="/posts/health.html">Health & Lifestyle</a></li>
-                <li><a href="/posts/agriculture.html">Agriculture</a></li>
-                <li><a href="/posts/sports.html">Sports</a></li>
-                <li><a href="/posts/news.html">News</a></li>
-                <li><a href="/posts/events.html">Events</a></li>
+                            <li><a href="/posts/technology.html">Technology</a></li>
+                            <li><a href="/posts/health.html">Health & Lifestyle</a></li>
+                            <li><a href="/posts/agriculture.html">Agriculture</a></li>
+                            <li><a href="/posts/sports.html">Sports</a></li>
+                            <li><a href="/posts/news.html">News</a></li>
+                            <li><a href="/posts/events.html">Events</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -35,116 +35,108 @@
                 <button class="auth-button">Sign In / Create Account</button>
             </nav>
         </header>
-
         <main>
-            <!-- Posts and Sidebar Container -->
             <div class="posts-container">
-                <!-- Main Posts Area -->
                 <section class="posts-main">
                     <h2>Latest Posts</h2>
-                    <div class="posts-grid">
-                        <!-- iPhone 17 Post -->
-                        <article class="posts-card">
+                    <div class="posts-grid" id="posts-grid" aria-live="polite">
+                        <article class="posts-card" data-topic="technology">
                             <img src="/assets/images/iphone-17.jpg" alt="iPhone 17 Review" width="300" height="200" loading="lazy">
                             <h3>iPhone 17 Review: Apple's Slimmest Yet with Pro-Level Power</h3>
                             <p class="meta">Posted on September 16, 2025</p>
                             <p>Apple’s iPhone 17, unveiled September 9, 2025, dazzles with the A19 chip and stunning 48MP cameras.</p>
-                            <a href="posts.html#technology" class="read-more" aria-label="Read full iPhone 17 review">Read More</a>
+                            <a href="/posts/technology.html" class="read-more" aria-label="Read full iPhone 17 review">Read More</a>
                         </article>
-                        <!-- Home Workouts Post -->
-                        <article class="posts-card">
+                        <article class="posts-card" data-topic="health">
                             <img src="/assets/images/workout.jpg" alt="Top 10 Home Workouts" width="300" height="200" loading="lazy">
                             <h3>Top 10 Home Workouts: Transform Your Lifestyle Without Leaving Home</h3>
                             <p class="meta">Posted on September 16, 2025</p>
                             <p>Discover the best bodyweight exercises for a full-body routine that fits any busy schedule.</p>
-                            <a href="posts.html#lifestyle" class="read-more" aria-label="Read full home workouts post">Read More</a>
+                            <a href="/posts/health.html" class="read-more" aria-label="Read full home workouts post">Read More</a>
                         </article>
-                        <!-- Kenya Protest Post -->
-                        <article class="posts-card">
+                        <article class="posts-card" data-topic="news">
                             <img src="/assets/images/news.jpg" alt="Kenya Protest Compensation" width="300" height="200" loading="lazy">
                             <h3>Kenya Government Forms Committee to Compensate Protest Victims Since 2017</h3>
                             <p class="meta">Posted on September 16, 2025</p>
                             <p>President Ruto announces a 120-day framework to redress harms from deadly protests, including Gen Z unrest.</p>
-                            <a href="posts.html#news" class="read-more" aria-label="Read full Kenya protest compensation post">Read More</a>
+                            <a href="/posts/news.html" class="read-more" aria-label="Read full Kenya protest compensation post">Read More</a>
                         </article>
-                        <article class="post-card">
-                            <img src="/assets/images/agriculture.jpg" alt="agriculture">
+                        <article class="posts-card" data-topic="agriculture">
+                            <img src="/assets/images/agriculture.jpg" alt="Kenya Fertilizer Compensation" width="300" height="200" loading="lazy">
                             <h3>Kenya Government Forms Committee to Compensate Farmers Who Bought Fake Fertilizer in 2024</h3>
                             <p class="meta">Posted on September 16, 2025</p>
                             <p>President Ruto announces a 120-day framework to redress harms from fertilizer scandal.</p>
-                            <a href="posts.html#news" class="read-more">Read More</a>
+                            <a href="/posts/agriculture.html" class="read-more" aria-label="Read full Kenya fertilizer compensation post">Read More</a>
                         </article>
-
-                        <article class="post-card">
-                            <img src="/assets/images/sports.jpg" alt="Arsenal win the premier league">
-                            <h3>Arsenal's 20 year premier league trophy ends.</h3>
+                        <article class="posts-card" data-topic="sports">
+                            <img src="/assets/images/sports.jpg" alt="Arsenal Premier League Win" width="300" height="200" loading="lazy">
+                            <h3>Arsenal's 20 Year Premier League Trophy Ends</h3>
                             <p class="meta">Posted on September 16, 2025</p>
-                            <p>Mikel Arteta stears Arsenal to premier league win, bringing the 20 year wait to an end.</p>
-                            <a href="posts.html#news" class="read-more">Read More</a>
+                            <p>Mikel Arteta steers Arsenal to Premier League win, bringing the 20-year wait to an end.</p>
+                            <a href="/posts/sports.html" class="read-more" aria-label="Read full Arsenal Premier League win post">Read More</a>
                         </article>
                     </div>
+                    
+                    <a href="" class="load-more">Load More</a>
+
                 </section>
-                <!-- Sidebar -->
                 <aside class="posts-sidebar">
                     <h2>Topics</h2>
                     <ul class="topic-links">
-                <li><a href="/posts/technology.html">Technology</a></li>
-                <li><a href="/posts/health.html">Health & Lifestyle</a></li>
-                <li><a href="/posts/agriculture.html">Agriculture</a></li>
-                <li><a href="/posts/sports.html">Sports</a></li>
-                <li><a href="/posts/news.html">News</a></li>
-                <li><a href="/posts/events.html">Events</a></li>
+                        <li><a href="/posts/technology.html">Technology</a></li>
+                        <li><a href="/posts/health.html">Health & Lifestyle</a></li>
+                        <li><a href="/posts/agriculture.html">Agriculture</a></li>
+                        <li><a href="/posts/sports.html">Sports</a></li>
+                        <li><a href="/posts/news.html">News</a></li>
+                        <li><a href="/posts/events.html">Events</a></li>
                     </ul>
                 </aside>
             </div>
         </main>
-
-                <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <div class="footer-logo">News BYTE.</div>
-            <p class="footer-description">
-                Leading provider of insightful blog content, covering News, Technology, Health & Lifestyle, Sports, and more to inspire and educate our readers.
-            </p>
-        </div>
-        <div class="footer-column">
-            <h3>Our Services</h3>
-            <ul class="footer-links">
-                <li><a href="/posts/technology.html">Technology</a></li>
-                <li><a href="/posts/health.html">Health & Lifestyle</a></li>
-                <li><a href="/posts/agriculture.html">Agriculture</a></li>
-                <li><a href="/posts/sports.html">Sports</a></li>
-                <li><a href="/posts/news.html">News</a></li>
-                <li><a href="/posts/events.html">Events</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-            <ul class="footer-contact">
-                <li><i class="fas fa-map-marker-alt"></i> 123 Blog Street, Nairobi, Kenya</li>
-                <li><i class="fas fa-clock"></i> 8:00 AM - 5:00 PM</li>
-                <li><i class="fas fa-phone"></i> +254 123 456 789</li>
-                <li><i class="fas fa-envelope"></i> <a href="mailto:info@myblog.com">info@myblog.com</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Follow Us</h3>
-            <div class="social-links">
-                <a href="https://x.com/news_byte" class="social-icon" aria-label="Follow us on X"><i class="fab fa-x-twitter"></i> @news_byte</a>
-                <a href="https://facebook.com/news_byte" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i> @news_byte</a>
-                <a href="https://instagram.com/news_byte" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i> @news_byte</a>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">News BYTE.</div>
+                    <p class="footer-description">
+                        Leading provider of insightful blog content, covering News, Technology, Health & Lifestyle, Sports, and more to inspire and educate our readers.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="/posts/technology.html">Technology</a></li>
+                        <li><a href="/posts/health.html">Health & Lifestyle</a></li>
+                        <li><a href="/posts/agriculture.html">Agriculture</a></li>
+                        <li><a href="/posts/sports.html">Sports</a></li>
+                        <li><a href="/posts/news.html">News</a></li>
+                        <li><a href="/posts/events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Blog Street, Nairobi, Kenya</li>
+                        <li><i class="fas fa-clock"></i> 8:00 AM - 5:00 PM</li>
+                        <li><i class="fas fa-phone"></i> +254 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@myblog.com">info@myblog.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://x.com/news_byte" class="social-icon" aria-label="Follow us on X"><i class="fab fa-x-twitter"></i> @news_byte</a>
+                        <a href="https://facebook.com/news_byte" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i> @news_byte</a>
+                        <a href="https://instagram.com/news_byte" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i> @news_byte</a>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 News BYTE. All rights reserved.</p>
+                <p>Created by: <a href="#">Trybe Creations</a></p>
+                <p><a href="/privacy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 News BYTE. All rights reserved.</p>
-        <p>Created by: <a href="#">Trybe Creations</a></p>
-        <p><a href="/privacy.html">Privacy Policy</a></p>
-    </div>
-</footer>
-
-
-</div>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
