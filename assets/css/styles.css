@@ -154,10 +154,6 @@ nav {
     background-color: #0099cc;
 }
 
-.featured-post.hidden {
-    display: none;
-}
-
 
 .auth-button {
     padding: 0.6rem 1.2rem;
@@ -280,12 +276,18 @@ nav {
     padding: 2rem;
     background-color: #f8f8f8;
     text-align: center;
+    transition: opacity 0.3s ease, display 0.3s ease;
 }
 
 .featured-post h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
+
+.featured-post[style*="display: none"] {
+    opacity: 0;
+}
+
 
 .featured-grid {
     display: flex;
@@ -440,11 +442,15 @@ nav {
 
 
 .no-results {
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
-    color: #666;
+    color: #fff;
     text-align: center;
-    padding: 1rem;
-    grid-column: 1 / -1;
+    padding: 2rem;
+    background-color: #333;
+    border-radius: 8px;
+    margin: 1rem auto;
+    max-width: 600px;
 }
 
 @media (max-width: 768px) {
@@ -456,6 +462,10 @@ nav {
     .load-more {
         padding: 0.7rem 1.5rem;
         font-size: 1rem;
+    }
+        .no-results {
+        font-size: 1rem;
+        padding: 1.5rem;
     }
     
 }
@@ -476,6 +486,7 @@ nav {
     .hero p, .about-hero p {
         font-size: 1rem;
     }
+
 
     .featured-card {
         flex-direction: column;

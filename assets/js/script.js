@@ -50,3 +50,54 @@ document.addEventListener('DOMContentLoaded', () => {
             loadMoreBtn.textContent = 'Error Loading Posts';
         });
 });
+
+
+// Search Bar Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('#search-input');
+    const searchButton = document.querySelector('#search-button');
+    const postGrid = document.querySelector('#post-grid') || document.querySelector('#posts-grid');
+    const noResults = postGrid ? postGrid.querySelector('.no-results') : null;
+    const featuredPost = document.querySelector('#featured-post'); // Select featured section (index.html only)
+
+    if (!searchInput || !searchButton || !postGrid || !noResults) {
+        console.error('Search bar or post grid elements not found');
+        return;
+    }
+
+    const filterPosts = () => {
+        const query = searchInput.value.trim().toLowerCase();
+        const posts = postGrid.querySelectorAll('.post-card, .posts-card');
+        let hasMatches = false;
+
+        posts.forEach(post => {
+            const title = post.querySelector('h3').textContent.toLowerCase();
+            const topic = post.dataset.topic.toLowerCase();
+            const isMatch = title.includes(query) || topic.includes(query);
+            post.style.display = isMatch ? '' : 'none';
+            if (isMatch) hasMatches = true;
+        });
+
+        // Toggle featured section and no-results message (index.html only)
+        if (featuredPost) {
+            featuredPost.style.display = query && hasMatches ? 'none' : '';
+        }
+        noResults.style.display = query && !hasMatches ? 'block' : 'none';
+
+        // Show all posts if query is empty
+        if (!query) {
+            posts.forEach(post => {
+                post.style.display = '';
+            });
+        }
+    };
+
+    searchButton.addEventListener('click', filterPosts);
+    searchInput.addEventListener('input', filterPosts);
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            filterPosts();
+        }
+    });
+});
