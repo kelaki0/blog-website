@@ -1,4 +1,60 @@
+// get the current URL path
+const currentPath = window.location.pathname;
+// select all navigation links
+const navLinks = document.querySelectorAll('.nav-links li a');
+// loop through each link
+navLinks.forEach(link => {
+    //check if the link's href matches the current URL path
+    if (link.pathname === currentPath) {
+        // add the active class to the current link
+        link.classList.add('active');
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('#search-input');
+    const clearButton = document.querySelector('#clear-search');
+    const postsGrid = document.querySelector('#posts-grid') || document.querySelector('#post-grid');
+    const noResults = document.querySelector('.no-results');
+
+    if (searchInput && clearButton) {
+        clearButton.addEventListener('click', () => {
+            searchInput.value = ''; // Clear input
+            searchInput.focus(); // Refocus input
+            clearButton.style.display = 'none'; // Hide clear button
+            if (postsGrid && noResults) {
+                // Reset posts (show all, hide no-results)
+                postsGrid.querySelectorAll('.posts-card, .post-card').forEach(card => {
+                    card.style.display = '';
+                });
+                noResults.style.display = 'none';
+            }
+        });
+
+        // Show/hide clear button based on input value
+        searchInput.addEventListener('input', () => {
+            clearButton.style.display = searchInput.value ? 'block' : 'none';
+        });
+    }
+});
+
+// Mobile hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+const dropdown = document.querySelector('.dropdown');
+
+if (hamburger && nav && dropdown) {
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+        dropdown.classList.toggle('active');
+    });
+}
+
 // Topic Filter Functionality
+
+// Add an event listener to the document object that triggers when the DOM (Document Object Model) is
+// fully loaded and parsed. This ensures the script runs only after all HTML elements are available.
 document.addEventListener('DOMContentLoaded', () => {
     const postGrid = document.querySelector('#posts-grid');
     const topicLinks = document.querySelectorAll('.topic-links a, .footer-links a');
@@ -70,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Update dynamic post loading to respect current topic
+    // dynamic post loading functionality
     fetch('/assets/data/posts.json')
         .then(response => {
             if (!response.ok) throw new Error('Failed to load posts');

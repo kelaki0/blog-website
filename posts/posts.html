@@ -30,7 +30,9 @@
                 </ul>
                 <div class="search-bar">
                     <input type="text" id="search-input" placeholder="Search posts...">
-                    <button type="button" id="search-button">Search</button>
+                        <button type="button" id="search-button" aria-label="Search">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </button>
                 </div>
                 <button class="auth-button">Sign In / Create Account</button>
             </nav>
@@ -83,9 +85,9 @@
 
                 </section>
                 <aside class="posts-sidebar">
-                    <h2>Topics</h2>
+                    <h2>Topics.</h2>
                     <ul class="topic-links">
-                        <li><a href="#" data-topic="all" class="active" aria-label="Show all posts">Show All</a></li>
+                        
                         <li><a href="#" data-topic="technology" aria-label="Filter by Technology">Technology</a></li>
                         <li><a href="#" data-topic="health" aria-label="Filter by helath">Health & Lifestyle</a></li>
                         <li><a href="#" data-topic="agriculture" aria-label="Filter by agriculture">Agriculture</a></li>

@@ -1,189 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog - Home</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-    <div class="page-wrapper">
-        <header>
-            <a href="/index.html" class="logo" aria-label="News BYTE homepage">News BYTE.</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="/posts/posts.html" class="dropdown-toggle">Posts <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/posts/technology.html">Technology</a></li>
-                            <li><a href="/posts/health.html">Health & Lifestyle</a></li>
-                            <li><a href="/posts/agriculture.html">Agriculture</a></li>
-                            <li><a href="/posts/sports.html">Sports</a></li>
-                            <li><a href="/posts/news.html">News</a></li>
-                            <li><a href="/posts/events.html">Events</a></li>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Blog - Home</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <a href="/index.html" class="logo" aria-label="News BYTE homepage">News-BYTE.</a>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="/index.html" class="active">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li class="dropdown">
+                            <a href="/posts/posts.html" class="dropdown-toggle">Posts <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/posts/technology.html">Technology</a></li>
+                                <li><a href="/posts/health.html">Health & Lifestyle</a></li>
+                                <li><a href="/posts/agriculture.html">Agriculture</a></li>
+                                <li><a href="/posts/sports.html">Sports</a></li>
+                                <li><a href="/posts/news.html">News</a></li>
+                                <li><a href="/posts/events.html">Events</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search posts..." aria-label="Search posts">
+                        <button type="button" id="clear-search" class="clear-button" aria-label="Clear search input">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <button type="button" id="search-button" aria-label="Search">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <button class="auth-button">Sign In / Create Account</button>
+                </nav>
+            </header>
+            <main>
+                <section class="hero">
+                    <div class="hero-content">
+                        <h1>Welcome to News-BYTE.</h1>
+                        <p>Discover insightful articles on technology, lifestyle, tutorials, and more!</p>
+                        <a href="/posts/posts.html" class="hero-cta">Read Latest Posts</a>
+                    </div>
+                </section>
+                <section class="featured-post" id="featured-post">
+                    <h2>Explore Our Topics</h2>
+                    <div class="featured-grid">
+                        <article class="featured-card">
+                            <img src="/assets/images/tech-posts.jpg" alt="Technology Topic">
+                            <div class="featured-content">
+                                <h3>Technology: Cutting-Edge Innovations</h3>
+                                <p class="meta">Updated September 16, 2025</p>
+                                <p>Stay ahead with the latest in tech, from AI breakthroughs to gadget reviews like the iPhone 17’s A19 chip and 48MP cameras.</p>
+                                <a href="/posts/technology.html" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="/assets/images/lifestyle.jpg" alt="Lifestyle Topic">
+                            <div class="featured-content">
+                                <h3>Health & Lifestyle: Live Your Best Life</h3>
+                                <p class="meta">Updated September 16, 2025</p>
+                                <p>Discover tips for wellness, travel, and modern living to inspire a balanced and fulfilling lifestyle.</p>
+                                <a href="/posts/health.html" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="/assets/images/agriculture.jpg" alt="Agriculture Topic">
+                            <div class="featured-content">
+                                <h3>Agriculture: Learn How to Grow</h3>
+                                <p class="meta">Updated September 16, 2025</p>
+                                <p>Master new skills with step-by-step guides on coding, DIY projects, and more for all levels.</p>
+                                <a href="/posts/agriculture.html" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="/assets/images/news.jpg" alt="News Topic">
+                            <div class="featured-content">
+                                <h3>News: Stay Informed</h3>
+                                <p class="meta">Updated September 16, 2025</p>
+                                <p>Get the latest updates on global events, industry trends, and breaking news that matters.</p>
+                                <a href="/posts/news.html" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="/assets/images/sports.jpg" alt="Sports Topic">
+                            <div class="featured-content">
+                                <h3>Sports: Stay Informed</h3>
+                                <p class="meta">Updated September 16, 2025</p>
+                                <p>Get the latest updates on sporting events and breaking news that matters.</p>
+                                <a href="/posts/sports.html" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                        <article class="featured-card">
+                            <img src="/assets/images/committee.jpg" alt="Sports Topic">
+                            <div class="featured-content">
+                                <h3>Events: Stay Informed</h3>
+                                <p class="meta">Updated September 16, 2025</p>
+                                <p>Get the latest updates on sporting events and breaking news that matters.</p>
+                                <a href="/posts/events.html" class="read-more">Read More</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <section class="blog-posts" id="blog-posts">
+                    <h2>Latest Posts</h2>
+                    <div class="post-grid" id="post-grid" aria-live="polite">
+                        <article class="post-card" data-topic="technology">
+                            <img src="/assets/images/iphone-17.jpg" alt="iPhone 17 Review">
+                            <h3>iPhone 17 Review: Apple's Slimmest Yet with Pro-Level Power</h3>
+                            <p class="meta">Posted on September 16, 2025</p>
+                            <p>Apple’s iPhone 17, unveiled September 9, 2025, dazzles with the A19 chip and stunning 48MP cameras.</p>
+                            <a href="/posts/technology/technology.html" class="read-more" aria-label="Read full iPhone 17 Review post">Read More</a>
+                        </article>
+                        <article class="post-card" data-topic="health">
+                            <img src="/assets/images/workout.jpg" alt="Top 10 Home Workouts">
+                            <h3>Top 10 Home Workouts: Transform Your Lifestyle Without Leaving Home</h3>
+                            <p class="meta">Posted on September 16, 2025</p>
+                            <p>Discover the best bodyweight exercises for a full-body routine that fits any busy schedule.</p>
+                            <a href="/posts/health.html" class="read-more" aria-label="Read full Top 10 Home Workouts">Read More</a>
+                        </article>
+                        <article class="post-card" data-topic="news">
+                            <img src="/assets/images/committee.jpg" alt="Kenya Protest Compensation">
+                            <h3>Kenya Government Forms Committee to Compensate Protest Victims Since 2017</h3>
+                            <p class="meta">Posted on September 16, 2025</p>
+                            <p>President Ruto announces a 120-day framework to redress harms from deadly protests, including Gen Z unrest.</p>
+                            <a href="/posts/news.html" class="read-more" aria-label="Read full Government's Compensation Committee">Read More</a>
+                        </article>
+                        <article class="post-card" data-topic="agriculture">
+                            <img src="/assets/images/agriculture.jpg" alt="agriculture">
+                            <h3>Kenya Government Forms Committee to Compensate Farmers Who Bought Fake Fertilizer in 2024</h3>
+                            <p class="meta">Posted on September 16, 2025</p>
+                            <p>President Ruto announces a 120-day framework to redress harms from fertilizer scandal.</p>
+                            <a href="/posts/agriculture.html" class="read-more" aria-label="Read full Fertilizer Farmers Compensation.">Read More</a>
+                        </article>
+                        <div class="no-results" style="display: none;">No posts match your search.</div>
+                    </div>
+                    <a href="/posts/posts.html" id="load-more" class="load-more" aria-label="Load more posts">Load More</a>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <div class="footer-logo">News-BYTE.</div>
+                        <p class="footer-description">
+                            Leading provider of insightful blog content, covering News, Technology, Health & Lifestyle, Sports, and more to inspire and educate our readers.
+                        </p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="/posts/posts.html" data-topic="technology" aria-label="Filter by Technology">Technology</a></li>
+                            <li><a href="/posts/posts.html" data-topic="health" aria-label="Filter by health">Health & Lifestyle</a></li>
+                            <li><a href="/posts/posts.html" data-topic="agriculture" aria-label="Filter by agriculture">Agriculture</a></li>
+                            <li><a href="/posts/posts.html" data-topic="sports" aria-label="Filter by sports">Sports</a></li>
+                            <li><a href="/posts/posts.html" data-topic="news" aria-label="Filter by news">News</a></li>
+                            <li><a href="/posts/posts.html" data-topic="events" aria-label="Filter by events">Events</a></li>
                         </ul>
-                    </li>
-                </ul>
-                <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Search posts..." aria-label="Search posts">
-                    <button type="button" id="search-button" aria-label="Search">Search</button>
-                </div>
-                <button class="auth-button">Sign In / Create Account</button>
-            </nav>
-        </header>
-        <main>
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Welcome to News BYTE</h1>
-                    <p>Discover insightful articles on technology, lifestyle, tutorials, and more!</p>
-                    <a href="/posts/posts.html" class="hero-cta">Read Latest Posts</a>
-                </div>
-            </section>
-            <section class="featured-post" id="featured-post">
-                <h2>Explore Our Topics</h2>
-                <div class="featured-grid">
-                    <article class="featured-card">
-                        <img src="/assets/images/tech-posts.jpg" alt="Technology Topic">
-                        <div class="featured-content">
-                            <h3>Technology: Cutting-Edge Innovations</h3>
-                            <p class="meta">Updated September 16, 2025</p>
-                            <p>Stay ahead with the latest in tech, from AI breakthroughs to gadget reviews like the iPhone 17’s A19 chip and 48MP cameras.</p>
-                            <a href="/posts/technology.html" class="read-more">Read More</a>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Blog Street, Nairobi, Kenya</li>
+                            <li><i class="fas fa-clock"></i> 8:00 AM - 5:00 PM</li>
+                            <li><i class="fas fa-phone"></i> +254 123 456 789</li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@myblog.com">info@myblog.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="https://x.com/news_byte" class="social-icon" aria-label="Follow us on X"><i class="fab fa-x-twitter"></i> @news_byte</a>
+                            <a href="https://facebook.com/news_byte" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i> @news_byte</a>
+                            <a href="https://instagram.com/news_byte" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i> @news_byte</a>
                         </div>
-                    </article>
-                    <article class="featured-card">
-                        <img src="/assets/images/lifestyle.jpg" alt="Lifestyle Topic">
-                        <div class="featured-content">
-                            <h3>Health & Lifestyle: Live Your Best Life</h3>
-                            <p class="meta">Updated September 16, 2025</p>
-                            <p>Discover tips for wellness, travel, and modern living to inspire a balanced and fulfilling lifestyle.</p>
-                            <a href="/posts/health.html" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                    <article class="featured-card">
-                        <img src="/assets/images/agriculture.jpg" alt="Agriculture Topic">
-                        <div class="featured-content">
-                            <h3>Agriculture: Learn How to Grow</h3>
-                            <p class="meta">Updated September 16, 2025</p>
-                            <p>Master new skills with step-by-step guides on coding, DIY projects, and more for all levels.</p>
-                            <a href="/posts/agriculture.html" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                    <article class="featured-card">
-                        <img src="/assets/images/news.jpg" alt="News Topic">
-                        <div class="featured-content">
-                            <h3>News: Stay Informed</h3>
-                            <p class="meta">Updated September 16, 2025</p>
-                            <p>Get the latest updates on global events, industry trends, and breaking news that matters.</p>
-                            <a href="/posts/news.html" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                    <article class="featured-card">
-                        <img src="/assets/images/sports.jpg" alt="Sports Topic">
-                        <div class="featured-content">
-                            <h3>Sports: Stay Informed</h3>
-                            <p class="meta">Updated September 16, 2025</p>
-                            <p>Get the latest updates on sporting events and breaking news that matters.</p>
-                            <a href="/posts/sports.html" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                    <article class="featured-card">
-                        <img src="/assets/images/committee.jpg" alt="Sports Topic">
-                        <div class="featured-content">
-                            <h3>Events: Stay Informed</h3>
-                            <p class="meta">Updated September 16, 2025</p>
-                            <p>Get the latest updates on sporting events and breaking news that matters.</p>
-                            <a href="/posts/events.html" class="read-more">Read More</a>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="blog-posts" id="blog-posts">
-                <h2>Latest Posts</h2>
-                <div class="post-grid" id="post-grid" aria-live="polite" >
-                    <article class="post-card" data-topic="technology">
-                        <img src="/assets/images/iphone-17.jpg" alt="iPhone 17 Review">
-                        <h3>iPhone 17 Review: Apple's Slimmest Yet with Pro-Level Power</h3>
-                        <p class="meta">Posted on September 16, 2025</p>
-                        <p>Apple’s iPhone 17, unveiled September 9, 2025, dazzles with the A19 chip and stunning 48MP cameras.</p>
-                        <a href="/posts/technology/technology.html" class="read-more" aria-label="Read full iPhone 17 Review post">Read More</a>
-                    </article>
-                    <article class="post-card" data-topic="health">
-                        <img src="/assets/images/workout.jpg" alt="Top 10 Home Workouts">
-                        <h3>Top 10 Home Workouts: Transform Your Lifestyle Without Leaving Home</h3>
-                        <p class="meta">Posted on September 16, 2025</p>
-                        <p>Discover the best bodyweight exercises for a full-body routine that fits any busy schedule.</p>
-                        <a href="/posts/health.html" class="read-more" aria-label="Read full Top 10 Home Workouts">Read More</a>
-                    </article>
-                    <article class="post-card" data-topic="news">
-                        <img src="/assets/images/committee.jpg" alt="Kenya Protest Compensation">
-                        <h3>Kenya Government Forms Committee to Compensate Protest Victims Since 2017</h3>
-                        <p class="meta">Posted on September 16, 2025</p>
-                        <p>President Ruto announces a 120-day framework to redress harms from deadly protests, including Gen Z unrest.</p>
-                        <a href="/posts/news.html" class="read-more" aria-label="Read full Government's Compensation Committee">Read More</a>
-                    </article>
-                    <article class="post-card" data-topic="agriculture">
-                        <img src="/assets/images/agriculture.jpg" alt="agriculture">
-                        <h3>Kenya Government Forms Committee to Compensate Farmers Who Bought Fake Fertilizer in 2024</h3>
-                        <p class="meta">Posted on September 16, 2025</p>
-                        <p>President Ruto announces a 120-day framework to redress harms from fertilizer scandal.</p>
-                        <a href="/posts/agriculture.html" class="read-more" aria-label="Read full Fertilizer Farmers Compensation.">Read More</a>
-                    </article>
-                    <div class="no-results" style="display: none;">No posts match your search.</div>
-                </div>
-
-               <a href="/posts/posts.html" id="load-more" class="load-more" aria-label="Load more posts">Load More</a>
-
-            </section>
-        </main>
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <div class="footer-logo">News BYTE.</div>
-                    <p class="footer-description">
-                        Leading provider of insightful blog content, covering News, Technology, Health & Lifestyle, Sports, and more to inspire and educate our readers.
-                    </p>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="/posts/posts.html" data-topic="technology" aria-label="Filter by Technology">Technology</a></li>
-                        <li><a href="/posts/posts.html" data-topic="health" aria-label="Filter by health">Health & Lifestyle</a></li>
-                        <li><a href="/posts/posts.html" data-topic="agriculture" aria-label="Filter by agriculture">Agriculture</a></li>
-                        <li><a href="/posts/posts.html" data-topic="sports" aria-label="Filter by sports">Sports</a></li>
-                        <li><a href="/posts/posts.html" data-topic="news" aria-label="Filter by news">News</a></li>
-                        <li><a href="/posts/posts.html" data-topic="events" aria-label="Filter by events">Events</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Blog Street, Nairobi, Kenya</li>
-                        <li><i class="fas fa-clock"></i> 8:00 AM - 5:00 PM</li>
-                        <li><i class="fas fa-phone"></i> +254 123 456 789</li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@myblog.com">info@myblog.com</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="https://x.com/news_byte" class="social-icon" aria-label="Follow us on X"><i class="fab fa-x-twitter"></i> @news_byte</a>
-                        <a href="https://facebook.com/news_byte" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i> @news_byte</a>
-                        <a href="https://instagram.com/news_byte" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i> @news_byte</a>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 News BYTE. All rights reserved.</p>
-                <p>Created by: <a href="#">Trybe Creations</a></p>
-                <p><a href="/privacy.html">Privacy Policy</a></p>
-            </div>
-        </footer>
-    </div>
-    <script src="/assets/js/script.js"></script>
-</body>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 News-BYTE. All rights reserved.</p>
+                    <p>Created by: <a href="#">Trybe Creations</a></p>
+                    <p><a href="/privacy.html">Privacy Policy</a></p>
+                </div>
+            </footer>
+        </div>
+        <script src="/assets/js/script.js"></script>
+    </body>
 </html>
